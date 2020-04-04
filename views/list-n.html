@@ -1,0 +1,39 @@
+{{ extend './layout/home.html' }}
+
+{{ block 'body' }}
+<div class="warp page_bg mt25">
+    <div class="page_L">
+      
+    <div class="ab_contant">
+      <div class="pro_tu"><img src="/public/img/lxwm.jpg"></div>
+      <div class="L_contact">
+        <p>电 话：400-123-456</p>
+        <p>手 机：13657457767</p>
+        <p>联系人：刘先生</p>
+        <p>E_mail：taoshuwan@163.com</p>
+        <p>地 址：山西省晋中市左权县</p>
+      </div>
+    </div>
+  </div>
+    <div class="page_R">
+      <div class="page_tt"> <span class="wizhi">您当前的位置是：<a href="/">主页</a> &gt; <a href={{url}} >{{ title }}</a> &gt; </span>
+        <h3>{{ title }}</h3>
+      </div>
+      <div class="page_con">
+        <ul class="new_list1">
+          {{ each news }}
+            <li>
+              <div class="new_con_box1">
+                <p><a href="/article-n/{{ $value._id }}" target="_blank">{{ $value.handline }}</a></p>
+                <p>{{ $value.abstract }}</p>
+              </div>
+            </li>
+          {{ /each }}
+        
+        </ul>
+      </div>
+      
+      <!------翻页 END------> 
+    </div>
+</div>
+{{ /block }}

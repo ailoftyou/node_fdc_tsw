@@ -1,0 +1,31 @@
+{{ extend './layout/home.html' }}
+
+{{ block 'title' }}
+{{ art.handline }}
+{{ /block }}
+
+{{ block 'head' }}
+<link rel="stylesheet" href="/public/css/article.css">
+{{ /block }}
+
+{{ block 'body' }}
+<div class="page">
+    <div class="page_tt"> <span class="wizhi">您当前的位置是：<a href="/">主页</a> &gt; <a href="/guanyugongsi">关于公司</a> &gt; </span>
+      <h3>关于公司</h3>
+	</div>
+	
+	<div class="page_con">
+		<p class="con_title">{{ art.handline }}</p>
+		<p class="author">发布时间：{{ time }} 丨 文章来源：{{ art.author }} </p>
+		<div style="text-align: center;">
+	</div>
+  
+	<div>
+		{{ article }}
+	</div>
+	
+
+    
+
+</div>
+{{ /block }}
